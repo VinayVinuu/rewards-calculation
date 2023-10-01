@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "5cd2def9-288e-4368-a0fb-5ef912f706cd",
+		"name": "Rewards",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1026910"
+	},
+	"item": [
+		{
+			"name": "Calculate Reward Points",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactions\": [\r\n        {\r\n            \"transactionId\": 1,\r\n            \"transactionDate\": \"2023-09-28\",\r\n            \"transactionAmount\": 200\r\n        },\r\n        {\r\n            \"transactionId\": 2,\r\n            \"transactionDate\": \"2023-09-27\",\r\n            \"transactionAmount\": 120\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculateRewardPoints",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculateRewardPoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Calculate Monthly Rewards",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transactions\": [\r\n        {\r\n            \"transactionId\": 1,\r\n            \"transactionDate\": \"2023-09-28\",\r\n            \"transactionAmount\": 200\r\n        },\r\n        {\r\n            \"transactionId\": 2,\r\n            \"transactionDate\": \"2023-08-10\",\r\n            \"transactionAmount\": 120\r\n        },\r\n        {\r\n            \"transactionId\": 3,\r\n            \"transactionDate\": \"2023-05-04\",\r\n            \"transactionAmount\": 99\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/calculateMonthlyRewards",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"calculateMonthlyRewards"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
